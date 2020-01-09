@@ -1,15 +1,23 @@
 package com.github.curriculeon;
 
+import java.util.Arrays;
 import java.util.Comparator;
 
 /**
  * @author leon on 30/01/2019.
  */
 public class ItemSorter {
+    Item[] items;
+
     public ItemSorter(Item[] items) {
+        this.items = items;
     }
 
     public Item[] sort(Comparator<Item> comparator) {
-        return null;
+        Item[] itemsClone = items.clone();
+        Arrays.sort(itemsClone, comparator);
+        return itemsClone;
     }
+
+
 }
